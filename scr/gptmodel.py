@@ -81,7 +81,7 @@ class TransformerBlock(nn.Module):
         # attention layer
         short_cut = x
         s = self.norm1(x)
-        x = self.att(x)
+        x = self.att(s)
         x = self.drop_shortcut(x)
         x = x + short_cut # skip connection
 
