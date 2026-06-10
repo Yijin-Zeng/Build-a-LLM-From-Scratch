@@ -1,8 +1,8 @@
 ﻿# Build a LLM From Scratch
 
-A PyTorch implementation of GPT-2 trained from scratch. This is a fun project where I built and trained the model step by step, writing each component by hand rather than using a pre-built library.
+A PyTorch implementation of GPT-2 trained from scratch. This is a project where I built and trained the model from scratch based on PyTorch
 
-## What's in here
+## Components
 
 - **`scr/attentionLayers.py`** — Multi-head masked self-attention
 - **`scr/gptmodel.py`** — The full GPT model: token/position embeddings, transformer blocks, layer norm, GELU activation, and a linear output head
@@ -11,6 +11,6 @@ A PyTorch implementation of GPT-2 trained from scratch. This is a fun project wh
 - **`notebooks/main.ipynb`** — The notebook where I put everything together and ran the training
 - **`training_data/the-verdict.txt`** — The text used for training
 
-## How it works
+## High level overview
 
 The model follows the standard GPT-2 architecture: token and positional embeddings are added together, passed through a stack of transformer blocks (each with pre-norm, multi-head attention, and a feedforward layer with residual connections), and projected to vocabulary logits. Training uses cross-entropy loss with the AdamW optimizer.
